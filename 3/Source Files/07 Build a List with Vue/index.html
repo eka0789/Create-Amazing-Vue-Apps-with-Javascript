@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Vue Template</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+
+  <script src="https://unpkg.com/vue@next"></script>
+
+</head>
+
+<body>
+	<h1>Build a List with Vue.js</h1>
+
+  <div id="list">
+    <ol>
+      <li v-for="eachItem in listItems">
+        {{ eachItem.item }}
+      </li>
+    </ol>
+  </div>
+
+ 	<script src="script.js">
+	</script>
+</body>
+
+</html>

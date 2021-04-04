@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Vue Template</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+
+  <script src="https://unpkg.com/vue@next"></script>
+
+</head>
+
+<body>
+	<h1>Build with Components</h1>
+
+  <div id="navigation-div">
+    <button 
+      v-for="option in tabs"
+      v-bind:key="option"
+      v-bind:class="['tab-button', { active: currentTab === option }] "
+      v-on:click="currentTab = option"
+    >
+    {{ option.name }}
+    </button>
+
+    <component v-bind:is="currentTab.component">
+    </component>
+  </div>
+
+  <script src="script.js">
+	</script>
+</body>
+
+</html>
